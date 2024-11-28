@@ -7,7 +7,7 @@ import { render } from '@testing-library/react';
 import Car1  from './testClass1';
 import MountExample from './mountExample';
 import {PropsExample, SomeTest,Clickme,ConditionalTesat, ListMyCar} from './Example1';
-
+import { FormExample } from './formExample';
 
 class Car extends React.Component{
   constructor(){
@@ -46,6 +46,7 @@ root.render(
   <Clickme />
   <ConditionalTesat IsNeed={true}/>
   <ListMyCar/>
+  <FormExample/>
   </>
  
 );
