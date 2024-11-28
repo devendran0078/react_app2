@@ -3,12 +3,50 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { render } from '@testing-library/react';
+import Car1  from './testClass1';
+import MountExample from './mountExample';
+import {PropsExample, SomeTest,Clickme,ConditionalTesat} from './Example1';
+
+
+class Car extends React.Component{
+  constructor(){
+   super();
+   this.state = {
+    color:"Red",
+    Model : "Toyota"
+   }
+  }
+
+  render() { 
+    return <p>I m from class Car. My color is {this.state.color} and it was {this.props.year}</p>
+  }
+}
+
+class Garage extends React.Component{
+   render(){
+    return(
+      <div>
+      <p>My car </p>
+      <h1><Car year="2025"/></h1>
+    
+      </div>
+    )
+   }
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <>
+   <Garage />
+   <Car1 col = "Green1"/>
+   <MountExample />
+   <PropsExample />
+  <SomeTest />
+  <Clickme />
+  <ConditionalTesat IsNeed={true}/>
+  </>
+ 
 );
 
 // If you want to start measuring performance in your app, pass a function
