@@ -47,6 +47,20 @@ function ConditionalTesat(props)
 }
 
 const carList =["Ford","Toyota","Audi","Mercede"]
-const orgList = carList.map((el,index,list)=>{"id"={index}});
+const orgList = carList.map((el,index,list)=>({id:index,elem:el}));
 
-export  {PropsExample, SomeTest,Clickme , ConditionalTesat}
+function ListMyCar(){
+   
+    return (<div>
+         <p>I have follwing</p>
+        <ul>
+            {
+                orgList.map((e,index)=>(
+                   <li key={index}>{ e.elem} </li>
+                ))
+            }
+        </ul>
+        </div>);
+}
+
+export  {PropsExample, SomeTest,Clickme , ConditionalTesat, ListMyCar}

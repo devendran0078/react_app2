@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { render } from '@testing-library/react';
 import Car1  from './testClass1';
 import MountExample from './mountExample';
-import {PropsExample, SomeTest,Clickme,ConditionalTesat} from './Example1';
+import {PropsExample, SomeTest,Clickme,ConditionalTesat, ListMyCar} from './Example1';
 
 
 class Car extends React.Component{
@@ -45,6 +45,7 @@ root.render(
   <SomeTest />
   <Clickme />
   <ConditionalTesat IsNeed={true}/>
+  <ListMyCar/>
   </>
  
 );
